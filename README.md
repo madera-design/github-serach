@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# GitHub Search Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+¡Bienvenido a la aplicación de búsqueda de GitHub! Esta aplicación te permite buscar usuarios y repositorios en GitHub utilizando la API de GitHub y mostrar los resultados de una manera agradable e intuitiva.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Búsqueda de Usuarios**: Busca usuarios en GitHub y muestra información detallada sobre cada usuario, incluyendo su avatar, nombre de usuario, nombre real, biografía, ubicación y enlace a su perfil de GitHub.
+- **Búsqueda de Repositorios**: Busca repositorios en GitHub y muestra detalles como el nombre del repositorio, descripción, nombre del creador, número de estrellas, forks y lenguaje de programación.
+- **Modal de Usuario**: Muestra un modal con información detallada del usuario cuando se hace clic en un usuario de los resultados de búsqueda.
+- **Notificaciones Toast**: Notificaciones para indicar cuando no se encuentran usuarios o repositorios.
+- **Loader**: Indicador de carga mientras se realizan las búsquedas.
+- **Página de Inicio**: Pantalla de bienvenida con botones para redirigir a las búsquedas de usuarios y repositorios.
+- **Footer**: Información del creador en la página de inicio.
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clona este repositorio:
+     git clone https://github.com/tu-usuario/github-search-app.git
+2. Navega al directorio del proyecto:
+    cd github-search-app
+3. Instala las dependencias del proyecto:
+    npm install
+4. Inicia la aplicación:
+    npm start
+   
+La aplicación se ejecutará en el navegador en http://localhost:3000.
 
-### `npm test`
+Uso
+Página de Inicio: Desde la página de inicio, puedes navegar a las páginas de búsqueda de usuarios o repositorios utilizando los botones disponibles.
+Búsqueda de Usuarios: Ingresa un nombre de usuario en la barra de búsqueda y haz clic en "Buscar" para ver los resultados. Haz clic en cualquier usuario para ver más detalles en un modal.
+Búsqueda de Repositorios: Ingresa un término de búsqueda en la barra de búsqueda y haz clic en "Buscar" para ver los resultados. Los detalles del repositorio se muestran en formato de tarjeta.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Contribuciones
+¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, por favor abre un issue o envía un pull request.
 
-### `npm run build`
+Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hecho con ❤️ por Jose Madera 
