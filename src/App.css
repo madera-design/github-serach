@@ -1,38 +1,353 @@
-.App {
+/* src/app.css */
+
+/* Color Variables */
+:root {
+  --primary-color: #6200ea;
+  --primary-hover-color: #3700b3;
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --light-text-color: #555;
+  --white-color: #ffffff;
+  --border-color: #ccc;
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --loader-background: #000000b8;
+}
+
+/* General Styles */
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar Styles */
+nav {
+  background-color: var(--primary-color);
+  padding: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Home Styles */
+.home-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.github-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.home-button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.home-button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.footer a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ml-5 {
+  margin-left: 15px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Search Bar Styles */
+form {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.button-loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid var(--white-color);
+  width: 18px;
+  height: 18px;
+  animation: spin 1s linear infinite;
+}
+
+/* Results Styles */
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--white-color);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.card a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  color: var(--light-text-color);
+}
+
+/* Loader */
+.loader-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--loader-background);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid var(--primary-color);
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loader-container h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--white-color);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--white-color);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  border-radius: 50px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background-color: var(--primary-hover-color);
+  color: var(--white-color);
+}
+
+.modal-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin: 0.5rem 0;
+}
+
+.modal-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+.m-content--img {
+  display: flex;
+  justify-content: space-around;
+}
+
+.m-content--img__info {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.content-info {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #8080801f;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.m-content__text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mt-5 {
+  margin-top: 15px;
+}
+
+.welcome-container {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.welcome-container h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.welcome-container p {
+  margin-bottom: 0.5rem;
+  color: var(--light-text-color);
+}
+
+.button-a {
+  color: var(--primary-color);
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.button-a:hover {
+  color: var(--primary-color);
+  background-color: transparent;
 }
