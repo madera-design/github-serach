@@ -17,7 +17,7 @@
 Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local:
 
 1. Clona este repositorio:
-     git clone https://github.com/tu-usuario/github-search-app.git
+     git clone https://github.com/[tu-nombre-usuario]/github-serach.git
 2. Navega al directorio del proyecto:
     cd github-search-app
 3. Instala las dependencias del proyecto:
